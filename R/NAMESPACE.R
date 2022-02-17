@@ -1,7 +1,6 @@
 #' @useDynLib geepack
 
 #' @import methods
-#' @import parallel
 #' @importFrom MASS ginv
 #'
 #' @importFrom graphics abline lines plot
