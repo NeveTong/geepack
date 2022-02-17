@@ -350,10 +350,10 @@ geese.fit <- function(x, y, id,
   
   ## Initial values setup
   ## This may fail for binomial model with log link (relative risk)
-  ## fit0 <- parglm(x, y, weights=weights, offset=offset, family=family)
+  ## fit0 <- parglm.fit(x, y, weights=weights, offset=offset, family=family)
   if (is.null(b)){
     ##b <- rep(1,p)
-    fit0 <- parglm(x, y, weights=weights, offset=offset, family=family, control = parglm.control(nthreads = 10L))
+    fit0 <- parglm.fit(x, y, weights=weights, offset=offset, family=family, control = parglm.control(nthreads = 10L))
     b <- fit0$coef
   }
   if (is.null(alpha)) {
